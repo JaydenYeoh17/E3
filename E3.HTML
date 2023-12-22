@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    </head>
+    <body>
+
+<a-scene>
+<!-- Asset Management System -->
+<a-assets>
+
+    <a-assets-item id="village" src="scene.gltf"></a-assets-item>
+</a-assets>
+<a-entity gltf-model="#village"></a-entity>
+
+<a-entity position="30 10 -10">
+    <a-camera>
+        <a-cursor></a-cursor>
+    </a-camera>
+</a-entity>
+
+
+<a-cylinder radius="2" height="1" position="10 15 15" color="yellow"
+animation__drive="dur:5000; easing: linear; from:10 15 15; to: 10 15 -15; loop: -1; property: position"></a-cylinder>
+
+
+<a-box width="2" height="2" depth="2" position="10 17 -15" color="blue" 
+animation__drive="dur:5000; easing: linear; from:10 17 -15; to: 10 17 15; loop: -1; property: position" ></a-box>
+
+
+
+
+</a-scene>
+    </body>
+</html>
